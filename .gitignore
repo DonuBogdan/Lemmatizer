@@ -1,5 +1,5 @@
 # Py
 # ignore venv
-.venv
+venv
 # ignore vscode
 .vscode
