@@ -4,7 +4,9 @@ from scipy.io.wavfile import write
 import sounddevice as sd
 import numpy as np
 import speech_recognition as sr
+
 from tkinter import messagebox 
+
 from predict import predict_func
 
 
@@ -12,13 +14,6 @@ from predict import predict_func
 fs = 44100  # Sample rate
 seconds = 25  # Duration of recording
 
-root = Tk(className = 'Lemmatizer')
-
-# Set window size
-root.geometry('700x400')
-
-# Set window color
-root['background'] = '#CDE1F5'
 
 def get_lemmas():
 
@@ -57,6 +52,12 @@ def get_lemmas():
     messagebox.showinfo(title = 'Info 2', message = 'The lemmatization process is over !')
     
 
+root = Tk(className = 'Lemmatizer')
+# Set window size
+root.geometry('700x400')
+# Set window color
+root['background'] = '#CDE1F5'   
+
 record_clear_frame = Frame(root)
 record_clear_frame.place(relx = 0.5, rely = 0.45, anchor = CENTER)
 
@@ -72,10 +73,3 @@ button_1.pack(side = 'left')
 button_2.pack(side = 'right')
 
 root.mainloop()
-
-
-
-
-
-
-
